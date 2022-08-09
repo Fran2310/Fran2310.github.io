@@ -1,0 +1,115 @@
+:root {
+    /* Colores botones */
+    --forest-green-web: #3B8E30ff;
+    --forest-green-traditional: #105023ff;
+    --sunglow: #FECB00ff;
+    --amber-sae-ece: #F97B00ff;
+    --candy-apple-red: #FF0C00ff;
+    --maroon-web: #87040Bff;
+    --capri: #25C3FFff;
+    --dark-cornflower-blue: #1C468Aff;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+    font-size: calc(2.5vw + .5rem);
+    font-weight: 900;
+    background-color: var(--charcoal);
+    padding: .5rem 0;
+}
+
+.title-slider {
+    color: var(--ghost-white);
+    font-style: italic;
+    text-shadow: 5px 5px 5px var(--trypan-blue-alpha), 8px 5px 0 var(--indigo);
+}
+
+.menu-side {
+    background-color: var(--quick-silver);
+    min-width: 20%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 80%;
+}
+
+/* menu lateral base*/
+.menu-side {
+    color: var(--ghost-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-side-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 4vh;
+}
+
+.menu-side-container li {
+    display: flex;
+    transition: transform .5s;
+    transform: scale(1);
+    padding: .5rem 0;
+}
+
+.menu-side-container li:hover {
+    background-color: var(--hover-alpha);
+}
+
+.menu-side-container li a {
+    transition: all .5s;
+}
+
+.menu-side-container li:hover a {
+    margin-left: 30%;
+}
+
+.menu-side-container li a {
+    margin-left: 20%;
+}
+
+.line-hover {
+    order: -1;
+    transition: transform .5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+.menu-side-container li:hover .line-hover {
+    outline: var(--charcoal) solid .5rem;
+    transform: scaleX(1);
+}
+
+
+/* menu lateral modelos */
+.menu-side-container.modelo {
+    display: none;
+    height: 100%;
+    position: absolute;
+    background: black;
+    min-width: 100%;
+}
+
+.menu-side-container.modelo li{
+    background-color: inherit;
+}
+
+
+
+.menu-side-container li a:focus ~ .menu-side-container.modelo {
+    display: flex;
+}

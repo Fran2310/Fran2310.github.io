@@ -1,0 +1,113 @@
+h1 {
+    font-size: 15vh;
+    text-align: center;
+    text-shadow: 5px 5px 15px black;
+}
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+h2 {
+    display: inline-flex;
+    justify-content: flex-start;
+    font-size: 8vh;
+    padding: .5em .3em .1em 1em;
+}
+main {
+    min-height: 100vh;
+    color: var(--ghost-white);
+    text-shadow: 5px 5px 15px black;
+    background-image: url(/img/bg-about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.shadow-bg {
+    min-height: inherit;
+    background-color: hsla(210, 30%, 5%, .4);
+}
+
+/* zig-zag */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vH;
+}
+
+.about-item {
+    flex: 0 0 45%;
+    padding: 0 2.5rem;
+}
+.right {
+    justify-content: flex-end;
+    text-align: right;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+.reverse p {
+    text-align: right;
+}
+
+
+.line-center {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s;
+}
+
+.about-container:hover .line-center {
+    min-height: 45vh;
+    outline: .25rem solid;
+    transform: scaleY(1);
+}
+.about-container:hover .line-center.color-1 {
+    outline-color: var(--trypan-blue);
+}
+.about-container:hover .line-center.color-2 {
+    outline-color: var(--indigo);
+}
+.about-container:hover .line-center.color-3 {
+    outline-color: var(--imperial-red);
+}
+.about-container:hover .line-center.color-4 {
+    outline-color: var(--coquelicot);
+}
+.about-container:hover .line-center.color-5 {
+    outline-color: var(--amber);
+}
+.about-container:hover .line-center.color-6 {
+    outline-color: var(--trypan-blue);
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.location iframe{
+    min-width: 80vw;
+    margin: 2rem;
+    box-shadow: 0 0 20px 0 var(--charcoal), 0 0 100px 0 black;
+}
+.location h3 {
+    margin-top: 2em;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+@media screen and (max-width: 738px){
+    .about-container, .reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    h1 {
+        font-size: 10vh;
+    }
+}

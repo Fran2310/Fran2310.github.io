@@ -1,0 +1,118 @@
+:root {
+    --hover: #ffffff99;
+    --hover-alpha: #ffffff33;
+    --active-alpha: #ffffff4d;
+    --lincoln-green: #195b24;
+    --charcoal: #373e49;
+    --ghost-white: #f2f2f6;
+    --gainsboro: #e2e2e5;
+    --light-gray: #ccced1;
+    --trypan-blue: #1801ab;
+    --trypan-blue-dark: #13008b;
+    --trypan-blue-alpha: #1801ada6;
+    --bright-yellow-crayola: #fdaf28;
+    --indigo: #640086;
+    --red-ryb: #f92422;
+    --silver-metallic: #a5a5a9;
+    --silver-metallic-alpha: #a4a4a833;
+}
+
+/* slider */
+.section-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-item a img {
+    max-width: 100%;
+}
+.slide-item a {
+    max-width: 40%;
+    height: fit-content;
+}
+
+.container-slider {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.slider-image {
+    display: flex;
+    transition: all .5s;
+}
+
+.slide-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+.slide-item a {
+    margin: 5% 5%;
+    padding: 1%;
+    box-shadow: 0 5px 15px -5px var(--charcoal);
+    transform: scale(1);
+    transition: transform .5s;
+}
+.slide-item a:hover {
+    transform: scale(1.1);
+}
+
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 64px;
+    height: 12px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--trypan-blue-alpha);
+    margin: 0 20px;
+    text-align: center;
+    transition: all .3s;
+}
+.pagination-item:hover {
+    transform: scale(1.5);
+}
+
+
+input[id="view-1"]:checked ~ .slider-image{
+    transform: translate3d(0, 0, 0);
+}
+input[id="view-1"]:checked ~ .pagination .pagination-item[for="view-1"] {
+    background-color: var(--trypan-blue-dark);
+    transform: scale(1.25);
+}
+
+input[id="view-2"]:checked ~ .slider-image{
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+input[id="view-2"]:checked ~ .pagination .pagination-item[for="view-2"] {
+    background-color: var(--trypan-blue-dark);
+    transform: scale(1.25);
+}
+
+input[id="view-3"]:checked ~ .slider-image{
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+input[id="view-3"]:checked ~ .pagination .pagination-item[for="view-3"] {
+    background-color: var(--trypan-blue-dark);
+    transform: scale(1.25);
+}
