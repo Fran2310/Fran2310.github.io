@@ -50,7 +50,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-image: url(/img/bg-nav.png);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: var(--charcoal);
     color: var(--ghost-white);
