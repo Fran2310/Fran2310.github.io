@@ -15,6 +15,7 @@
     --red-ryb: #f92422;
     --silver-metallic: #a5a5a9;
     --silver-metallic-alpha: #a4a4a833;
+    --gray-x-11-gray: #B6B6BAff;
 }
 
 /* slider */
@@ -55,7 +56,11 @@
 .slide-item a {
     margin: 5% 5%;
     padding: 1%;
-    box-shadow: 0 5px 15px -5px var(--charcoal);
+    box-shadow: 0 5px 22px -5px var(--charcoal);
+    background-image: url(/img/bg_stickers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* outline: 1vh var(--gray-x-11-gray) solid; */
     transform: scale(1);
     transition: transform .5s;
 }

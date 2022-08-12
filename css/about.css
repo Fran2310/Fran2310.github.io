@@ -7,7 +7,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 85vh;
+    min-height: 74vh;
 }
 h2 {
     display: inline-flex;
@@ -106,8 +106,28 @@ main {
     .about-container, .reverse {
         flex-direction: column;
         text-align: center;
+        cursor: pointer;
     }
+
+    .about-container.reverse p {
+        text-align: center;
+    }
+
     h1 {
         font-size: 10vh;
+    }
+
+    .line-center {
+        transform: scaleX(0);
+        transform-origin: top;
+        transition: transform 1s;
+        margin-bottom: 1rem;
+    }
+    
+    .about-container:hover .line-center, .about-container:active .line-center {
+        min-width: 90%;
+        min-height: auto;
+        outline: .25rem solid;
+        transform: scaleX(1);
     }
 }

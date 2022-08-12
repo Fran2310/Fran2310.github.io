@@ -4,7 +4,6 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-
 }
 h2 {
     text-align: center;
@@ -13,6 +12,5 @@ h2 {
     font-size: calc(2.5vw + .5rem);
     font-weight: 900;
     font-style: italic;
-    text-shadow: 5px 5px 5px var(--trypan-blue-alpha), 8px 5px 0 var(--indigo);
     padding: .5rem 0;
 }

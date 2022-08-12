@@ -49,10 +49,11 @@ header {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    background-image: url(/img/bg-nav.png);
-    background-size: 100% 100%;
+    background-image: url(/img/bg_nav-bar.svg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-color: var(--charcoal);
+    background-color: var(--silver-metallic);
     color: var(--ghost-white);
     font-size: 4vh;
     font-weight: 700;
@@ -68,8 +69,15 @@ ul {
     list-style-type: none;
 }
 /* NAV BAR */
-.logo-container img{
-    width: 10vw;
+.logo-container {
+    background-image: url(/img/Mprinting_white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    height: 9vh;
+    width: 15%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 .icon {
     height: 5vh;
@@ -81,7 +89,11 @@ ul {
     display: flex;
 }
 .flex-menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 1vw;
+    height: 11vh;
 }
 
 .flex-menu-item:not(.flex-menu-item.active-none) {
@@ -113,12 +125,35 @@ ul {
     display: inline-flex;
     align-items:center;
 }
-@media screen and (max-width: 777px) {
+
+
+@media screen and (max-width: 992px) {
+    header {
+        background-size: cover 100%;
+    }
+    .logo-container {
+        background-image: url(/img/logo-planet.svg);
+    }
     .text-icon.nav {
         display: none;
     }
     .icon.red {
-        height: 3vh;
+        height: 3.5vh;
+    }
+    .flex-menu-item.active-none {
+        width: 8vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        background-position: center left;
+    }
+    .flex-menu-item {
+        justify-content: center;
+    }
+    .border-click {
+        margin-top: .5rem;
     }
 }
 
@@ -149,12 +184,17 @@ p.text-icon {
     justify-content: center;
     align-items: center;
 }
-@media screen and (max-width: 957px){
+@media screen and (max-width: 1075px){
+    .flex-foot-item a {
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 897px){
     .flex-foot-item a {
         justify-content: flex-start;
     }
 }
-@media screen and (max-width: 875px){
+@media screen and (max-width: 826px){
     .flex-foot-item a {
         justify-content: center;
     }
