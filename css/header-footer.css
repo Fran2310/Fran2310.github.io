@@ -29,6 +29,8 @@ font-family: 'Nunito', sans-serif;
     --silver-metallic: #a5a5a9;
     --silver-metallic-alpha: #a4a4a833;
     --quick-silver: #9EA1A4ff;
+    --quick-silver-alpha: rgba(158, 161, 164, 0.85);
+
 
     /* nav bar */
     --indigo: #640086ff;
@@ -126,6 +128,42 @@ ul {
     align-items:center;
 }
 
+.flex-menu-item:nth-child(2):hover .submenu{
+    display: flex;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--quick-silver-alpha) ;
+    width: 100%;
+    display: none;
+    
+}
+
+
+.submenu-item:hover {
+    background-color: var(--hover-alpha);
+    border-left: var(--charcoal) solid .5rem;
+}
+
+.submenu-item:hover a {
+    margin-left: .5rem;
+}
+
+.submenu-item {
+    padding: .5rem 1rem;
+    border-left: transparent solid .5rem;
+    transition:  background-color .5s;
+    
+}
+.submenu-item a {
+    transition: margin-left .5s;
+}
+
 
 @media screen and (max-width: 992px) {
     header {
@@ -140,9 +178,9 @@ ul {
     .icon.red {
         height: 3.5vh;
     }
-    .flex-menu-item.active-none {
+    /* .flex-menu-item.active-none {
         width: 8vw;
-    }
+    } */
 }
 
 @media screen and (max-width: 768px) {
