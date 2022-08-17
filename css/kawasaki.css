@@ -1,0 +1,176 @@
+:root {
+    /* klr 2014 */
+
+    /* klr 2015-16 */
+    --forest-green-web: #3B8E30ff;
+    --forest-green-traditional: #105023ff;
+    --sunglow: #FECB00ff;
+    --amber-sae-ece: #F97B00ff;
+    --candy-apple-red: #FF0C00ff;
+    --maroon-web: #87040Bff;
+    --capri: #25C3FFff;
+    --dark-cornflower-blue: #1C468Aff;
+}
+
+main {
+    display: flex;
+    justify-content: stretch;
+}
+
+/* Menu Lateral */
+.menu-side {
+    width: 20%;
+    height: auto;
+    background-color: var(--quick-silver);
+    color: var(--ghost-white);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.menu-side-title {
+    background-color: var(--charcoal);
+    text-align: center;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    text-align: center;
+}
+.menu-side-container {
+    display: flex;
+    flex-direction: column;
+}
+.menu-side-container-item {
+    padding: 1rem;
+    border-left: transparent solid .5rem;
+    transition: background .2s, border-left .25s;
+}
+.menu-side-container-item:hover {
+    border-left-color: var(--charcoal);
+    background-color: var(--hover-alpha);
+}
+.menu-side-container-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.menu-side-container-item-content:focus .arrow {
+    transform: rotate(180deg);
+}
+.menu-side-container-item-content:focus ~ .submenu-side-container {
+    position: relative;
+    transform: scaleY(1);
+}
+.arrow {
+    width: 1rem;
+    height: 1rem;
+    transition: transform .25s;
+}
+
+.submenu-side-container {
+    position: absolute;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform .25s;
+    font-size: 1.2rem;
+}
+.submenu-side-container-item {
+    padding: .5rem 1.5rem;
+    transition: transform .35s;
+}
+.submenu-side-container-item:hover {
+    transform: translateX(1.5rem);
+}
+
+/* tarjetas */
+.cards {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cards-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    border-bottom: .1rem solid var(--charcoal);
+    box-shadow: 0 1rem 1rem -1rem var(--charcoal);
+    width: 95%;
+}
+.cards-img {
+    width: 60%;
+    height: auto;
+}
+.cards-klr {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+.card a {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    box-shadow: 0 5px 22px -5px var(--charcoal);
+    padding: .5rem;
+    margin: 1rem;
+    transform: scale(1);
+    transition: transform .5s;
+}
+.card:hover a {
+    transform: scale(1.1);
+}
+.card-item-img {
+    width: inherit;
+    height: 30vh;
+    border-bottom: .1rem solid var(--charcoal);
+    margin-bottom: .5rem;
+    /* background-image: url(/img/bg_stickers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+.card-item-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card-item-colors {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: none;
+}
+.card-item-color {
+    margin: .25rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    box-shadow: .05rem .1rem 5px 0 var(--quick-silver);
+}
+
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(1) {
+    background-color: var(--forest-green-web);
+}
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(2) {
+    background-color: var(--forest-green-traditional);
+}
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(3) {
+    background-color: var(--sunglow);
+}
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(4) {
+    background-color: var(--amber-sae-ece);
+}
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(5) {
+    background-color: var(--candy-apple-red);
+}
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(6) {
+    background-color: var(--maroon-web);
+}
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(7) {
+    background-color: var(--capri);
+}
+.cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(8) {
+    background-color: var(--dark-cornflower-blue);
+}
