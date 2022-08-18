@@ -19,18 +19,27 @@ main {
 
 /* Menu Lateral */
 .menu-side {
-    width: 20%;
+    width: fit-content;
     height: auto;
     background-color: var(--quick-silver);
     color: var(--ghost-white);
     font-size: 1.5rem;
     font-weight: 500;
 }
+.menu-side-sticky {
+    position: sticky;
+    top: 1vh;
+    left: 0;
+    transition: top .5s;
+}
+header.up ~ main .menu-side .menu-side-sticky {
+    top: 13vh;
+}
 .menu-side-title {
     background-color: var(--charcoal);
     text-align: center;
     font-weight: 700;
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem;
     text-align: center;
 }
 .menu-side-container {
@@ -51,14 +60,17 @@ main {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    flex-wrap: wrap;
 }
-.menu-side-container-item-content:focus .arrow {
+.menu-side-container-item-content input:checked ~ .arrow {
     transform: rotate(180deg);
 }
-.menu-side-container-item-content:focus ~ .submenu-side-container {
+.menu-side-container-item-content input:checked ~ .submenu-side-container {
     position: relative;
     transform: scaleY(1);
 }
+
+
 .arrow {
     width: 1rem;
     height: 1rem;
@@ -71,6 +83,7 @@ main {
     transform: scaleY(0);
     transition: transform .25s;
     font-size: 1.2rem;
+    flex: 0 0 100%;
 }
 .submenu-side-container-item {
     padding: .5rem 1.5rem;
@@ -82,7 +95,6 @@ main {
 
 /* tarjetas */
 .cards {
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,7 +111,7 @@ main {
     width: 95%;
 }
 .cards-img {
-    width: 60%;
+    max-width: 100%;
     height: auto;
 }
 .cards-klr {
@@ -124,14 +136,10 @@ main {
     transform: scale(1.1);
 }
 .card-item-img {
-    width: inherit;
     height: 30vh;
+    width: auto;
     border-bottom: .1rem solid var(--charcoal);
     margin-bottom: .5rem;
-    /* background-image: url(/img/bg_stickers.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
 }
 .card-item-text {
     font-size: 1rem;
@@ -173,4 +181,21 @@ main {
 }
 .cards-klr .card:nth-child(2) a .card-item-text ~ .card-item-colors .card-item-color:nth-child(8) {
     background-color: var(--dark-cornflower-blue);
+}
+
+@media screen and (max-width: 1200px){
+    
+}
+@media screen and (max-width: 992px){
+    
+}
+@media screen and (max-width: 768px){
+    .card-item-img {
+        height: 20vh;
+    }
+}
+@media screen and (max-width: 576px){
+    .card-item-img {
+        height: 15vh;
+    }
 }
