@@ -152,7 +152,8 @@ ul {
 } 
 /* animacion end */
 .flex-menu-item:not(.flex-menu-item.active-none):active {
-    background-image: linear-gradient(transparent, var(--active-alpha), var(--hover));
+    background-image: linear-gradient(transparent, var(--active-alpha), var(--hover) 75%, var(--hover-alpha) 90%, transparent 95%);
+
 }
 .flex-menu-item a {
     display: inline-flex;
