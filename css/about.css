@@ -7,11 +7,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 85vh;
+    min-height: 72vh;
 }
 h2 {
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 8vh;
     padding: .5em .3em .1em 1em;
 }
@@ -92,7 +94,7 @@ main {
     padding: 0;
 }
 .location iframe{
-    min-width: 80vw;
+    width: 80%;
     margin: 2rem;
     box-shadow: 0 0 20px 0 var(--charcoal), 0 0 100px 0 black;
 }
@@ -106,8 +108,39 @@ main {
     .about-container, .reverse {
         flex-direction: column;
         text-align: center;
+        cursor: pointer;
     }
+
+    .about-container.reverse p {
+        text-align: center;
+    }
+
     h1 {
         font-size: 10vh;
+    }
+
+    h2 {
+        padding-top: 2rem;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+
+    .line-center {
+        transform: scaleX(0);
+        transform-origin: top;
+        transition: transform 1s;
+        margin-bottom: 1rem;
+    }
+    
+    .about-container:hover .line-center, .about-container:active .line-center {
+        min-width: 90%;
+        min-height: auto;
+        outline: .25rem solid;
+        transform: scaleX(1);
+    }
+
+    .location {
+        height: 100vh;
     }
 }

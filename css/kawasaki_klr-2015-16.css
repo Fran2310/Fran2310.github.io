@@ -1,0 +1,300 @@
+:root {
+    /* Colores botones */
+    --forest-green-web: #3B8E30ff;
+    --forest-green-traditional: #105023ff;
+    --sunglow: #FECB00ff;
+    --amber-sae-ece: #F97B00ff;
+    --candy-apple-red: #FF0C00ff;
+    --maroon-web: #87040Bff;
+    --capri: #25C3FFff;
+    --dark-cornflower-blue: #1C468Aff;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+    font-size: calc(2.5vw + .5rem);
+    font-weight: 900;
+    background-color: var(--charcoal);
+    padding: .5rem 0;
+
+}
+
+.title-slider {
+    color: var(--ghost-white);
+    font-style: italic;
+    text-shadow: 5px 5px 5px var(--trypan-blue-alpha), 8px 5px 0 var(--indigo);
+}
+.menu-side {
+    background-color: var(--quick-silver);
+    min-width: 20%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 80%;
+}
+
+.window-view {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+/* .buttoms {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 100%;
+    margin-bottom: 2.5vh;
+}
+
+.buttoms a{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    box-shadow: 1.5vh .8vh 10px 0 var(--quick-silver);
+
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.buttoms a:nth-child(1) {
+    background-color: var(--forest-green-web);
+}
+.buttoms a:nth-child(2) {
+    background-color: var(--forest-green-traditional);
+}
+.buttoms a:nth-child(3) {
+    background-color: var(--sunglow);
+}
+.buttoms a:nth-child(4) {
+    background-color: var(--amber-sae-ece);
+}
+.buttoms a:nth-child(5) {
+    background-color: var(--candy-apple-red);
+}
+.buttoms a:nth-child(6) {
+    background-color: var(--maroon-web);
+}
+.buttoms a:nth-child(7) {
+    background-color: var(--capri);
+}
+.buttoms a:nth-child(8) {
+    background-color: var(--dark-cornflower-blue);
+}
+
+.buttoms a:hover, .buttoms a:focus {
+    transform: scale(1.5);
+} */
+
+.sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ VERDE.webp);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 70vh;
+    margin: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.container-text {
+    min-width: 100%;
+    order: -2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container-text a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.container-text a img {
+    width: 2rem;
+    height: auto;
+    transition: transform .25s;
+    filter: drop-shadow(1px 1px 2px black);
+}
+.container-text a img:hover {
+    transform: scale(1.2);
+}
+.container-text p {
+    flex-grow: 1;
+    text-align: center;
+}
+.description {
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
+    width: 50%;
+}
+.description li {
+    padding: .25rem 0;
+}
+.motorbyke {
+    height: auto;
+    width: 35%;
+}
+.buttom {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    box-shadow: 1.5vh .8vh 10px 0 var(--quick-silver);
+    
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.buttom:hover,
+.buttom:focus {
+    transform: scale(1.5);
+}
+
+.buttom:nth-child(1) {
+    background-color: var(--forest-green-web);
+}
+.buttom:nth-child(2) {
+    background-color: var(--forest-green-traditional);
+}
+.buttom:nth-child(3) {
+    background-color: var(--sunglow);
+}
+.buttom:nth-child(4) {
+    background-color: var(--amber-sae-ece);
+}
+.buttom:nth-child(5) {
+    background-color: var(--candy-apple-red);
+}
+.buttom:nth-child(6) {
+    background-color: var(--maroon-web);
+}
+.buttom:nth-child(7) {
+    background-color: var(--capri);
+}
+.buttom:nth-child(8) {
+    background-color: var(--dark-cornflower-blue);
+}
+
+.buttom:nth-child(1):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ VERDE.webp);
+}
+.buttom:nth-child(2):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ VERDE\ OSCURO.webp);
+}
+.buttom:nth-child(3):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ AMARILLO.webp);
+}
+.buttom:nth-child(4):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ NARANJA\ CON\ AMARILLO.webp);
+}
+.buttom:nth-child(5):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ ROJO.webp);
+}
+.buttom:nth-child(6):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ ROJO\ OSCURO.webp);
+}
+.buttom:nth-child(7):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ AZUL.webp);
+}
+.buttom:nth-child(8):focus ~ .sticker {
+    background-image: url(/img/stickers_motos/klr/2015-16/KLR\ 2015-2016\ AZUL\ CON\ MORADO.webp);
+}
+
+
+
+/* menu lateral */
+.menu-side {
+    width: fit-content;
+    order: 0;
+    min-height: 100%;
+    background-color: var(--quick-silver);
+    color: var(--ghost-white);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.menu-side-sticky {
+    position: sticky;
+    top: 1vh;
+    left: 0;
+    transition: top .5s;
+}
+header.up ~ main .menu-side .menu-side-sticky {
+    top: 13vh;
+}
+.menu-side-title {
+    background-color: var(--charcoal);
+    text-align: center;
+    font-weight: 700;
+    padding: .5rem 1.5rem;
+    text-align: center;
+}
+.menu-side-container {
+    display: flex;
+    flex-direction: column;
+}
+.menu-side-container-item {
+    padding: 1rem;
+    border-left: transparent solid .5rem;
+    transition: background .2s, border-left .25s;
+}
+.menu-side-container-item:hover {
+    border-left-color: var(--charcoal);
+    background-color: var(--hover-alpha);
+}
+.menu-side-container-item-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+.text ~ button {
+    all: unset;
+    transition: transform .25s;
+}
+.arrow {
+    width: 1rem;
+    height: 1rem;
+}
+.menu-side-container-item-content input:checked ~ .text ~ button {
+    transform: rotate(180deg);
+}
+.menu-side-container-item-content input:checked ~ .submenu-side-container {
+    position: relative;
+    transform: scaleY(1);
+    top: 0;
+}
+
+
+
+.submenu-side-container {
+    position: absolute;
+    top: 2rem;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform .35s;
+    font-size: 1.2rem;
+    flex: 0 0 100%;
+}
+.submenu-side-container-item {
+    padding: .5rem 1.5rem;
+    transition: transform .35s;
+}
+.submenu-side-container-item:hover {
+    transform: translateX(1.5rem);
+}
