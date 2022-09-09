@@ -64,10 +64,19 @@ header {
 header.up {
     top: 0;
 }
-header nav {
+/* header nav {
     padding-bottom: 1vh;
     padding-top: 1vh;
 }
+header.up nav {
+    padding-bottom: 0;
+    padding-top: 0;
+} */
+header .flex-menu-item {
+    padding-bottom: 6.5vh;
+    padding-top: 6.5vh;
+}
+
 main {
     flex-grow: 1;
 }
@@ -163,13 +172,16 @@ ul {
 .flex-menu-item:nth-child(2):hover .submenu {
     display: flex;
 }
+.border-click {
+    margin-top: .25rem;
+}
 
 /* menu desplegable productos */
 .submenu {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 12vh;
+    top: 13vh;
     left: 0;
     background-color: var(--quick-silver-alpha) ;
     width: 100%;
@@ -191,6 +203,9 @@ ul {
 .submenu-item:hover a {
     transform: translateX(.5rem);
 }
+header:not(.up) .submenu.view {
+    display: none !important;
+}
 
 /* media querys nav*/
 @media screen and (max-width: 1200px) {
@@ -207,14 +222,27 @@ ul {
     .border-click {
         margin-top: .5rem;
     }
+    .submenu {
+        width: fit-content;
+    }
 }
 @media screen and (max-width: 992px) {
+    header {
+        top: -9vh;
+    }
+    .flex-menu-item {
+        height: 8vh;
+    }
+    header .flex-menu-item {
+        padding-bottom: 5vh;
+        padding-top: 5vh;
+    }
     .flex-menu-item.active-none {
         width: 10vw;
     }
     .logo-container {
         background-image: url(/img/logo-planet.svg);
-        height: 10vh;
+        height: 7.5vh;
         margin-top: .5vh;
         margin-bottom: .5vh;
     }
@@ -222,7 +250,7 @@ ul {
         display: none;
     }
     .submenu {
-        width: fit-content;
+        top: 10vh;
     }
 }
 @media screen and (max-width: 768px) {
@@ -251,6 +279,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     font-size: 2.5vh;
+    z-index: 20;
 }
 .logo-container-foot img{
     width: 20vw;
